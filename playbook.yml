@@ -21,7 +21,7 @@
 
   - name: start service ntp, if not running
     service:
-      name: ntpd
+      name: ntp
       state: started
     become: yes
 
