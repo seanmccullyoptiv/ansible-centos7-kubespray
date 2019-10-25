@@ -42,12 +42,6 @@
     become: yes
 
   - lineinfile:
-      path: /etc/sysconfig/network
-      state: present
-      line: 'HOSTNAME={{inventory_hostname}}.local'
-    become: yes
-
-  - lineinfile:
       path: /etc/hosts
       state: present
       line: '{{ansible_default_ipv4.address}}   {{inventory_hostname}}.local   {{inventory_hostname}}'
